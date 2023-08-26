@@ -30,6 +30,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
   void startExercise(BuildContext context) {
     const interval = Duration(seconds: 1);
     Timer.periodic(interval, (Timer timer) {
+
       if (countDownTimeInDouble != 0) {
         context
             .read<ExerciseBloc>()
@@ -290,6 +291,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
                                       seekColor: AppColors.colorED7844,
                                       seekSize: 22,
                                       animation: true,
+                                      maxProgress: (state.model.exerciseTimeInSecond ?? 0) * 10,
                                     ),
                                     Container(
                                       margin: EdgeInsets.all(18.w),
