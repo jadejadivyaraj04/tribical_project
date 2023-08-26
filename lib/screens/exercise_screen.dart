@@ -30,8 +30,6 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
   void startExercise(BuildContext context) {
     const interval = Duration(seconds: 1);
     Timer.periodic(interval, (Timer timer) {
-      debugPrint(timer.tick.toString());
-      debugPrint(countDownTimeInDouble.toString());
       if (countDownTimeInDouble != 0) {
         context
             .read<ExerciseBloc>()
