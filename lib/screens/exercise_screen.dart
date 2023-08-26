@@ -118,7 +118,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
                   countDownTimeInDouble = (state.model.exerciseTimeInSecond ?? 0) * 10;
                   countDownTime = state.model.exerciseTimeInSecond ?? 0;
                   if (state.completedRound.isEmpty) {
-                    state.completedRound.add(1);
+                    state.completedRound = [1];
                   } else {
                     state.completedRound.add(state.completedRound.last + 1);
                   }

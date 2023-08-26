@@ -18,7 +18,7 @@ class ExerciseState extends Equatable {
   final String message;
   double countDownTimeInDouble;
   int countDownTime;
-  final List<int> completedRound;
+  List<int> completedRound;
 
   @override
   List<Object?> get props => [model, exerciseStateEnum, message];
