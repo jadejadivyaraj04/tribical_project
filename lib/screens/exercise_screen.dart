@@ -182,7 +182,7 @@ class _ExerciseScreenState extends State<ExerciseScreen> {
                                       imageUrl: state.model.exerciseUrl!,
                                       height: 160.w,
                                       width: MediaQuery.of(context).size.width,
-                                      placeholder: (context, url) => const Center(child: CircularProgressIndicator()),
+                                      placeholder: (context, url) => Center(child: CircularProgressIndicator(color: AppColors.primaryPalette)),
                                       errorWidget: (context, url, error) => const Icon(Icons.error),
                                     )
                                   : const Offstage(),
